@@ -24,5 +24,19 @@ namespace Poseidon.Projects.Core.BL
             this.baseDal = RepositoryFactory<IProjectRepository>.Instance;
         }
         #endregion //Constructor
+
+        #region CRUD
+        /// <summary>
+        /// 添加项目
+        /// </summary>
+        /// <param name="entity">项目实体</param>
+        /// <returns></returns>
+        public override Project Create(Project entity)
+        {
+            entity.State = 0;
+            entity.Status = 0;
+            return base.Create(entity);
+        }
+        #endregion //CRUD
     }
 }

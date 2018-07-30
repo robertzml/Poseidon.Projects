@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Poseidon.Projects.Core", "Poseidon.Projects.Core\Poseidon.Projects.Core.csproj", "{1AD1DD26-42BB-4AD4-8AB8-C605E8B6B35F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Poseidon.Projects.ClientDx", "Poseidon.Projects.ClientDx\Poseidon.Projects.ClientDx.csproj", "{A44BFC5E-F73D-4A26-9E51-7A12F19471B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Poseidon.Projects.Test", "Poseidon.Projects.Test\Poseidon.Projects.Test.csproj", "{D72971C8-C135-47E9-BC01-08600E9FD9BE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{1AD1DD26-42BB-4AD4-8AB8-C605E8B6B35F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1AD1DD26-42BB-4AD4-8AB8-C605E8B6B35F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1AD1DD26-42BB-4AD4-8AB8-C605E8B6B35F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A44BFC5E-F73D-4A26-9E51-7A12F19471B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A44BFC5E-F73D-4A26-9E51-7A12F19471B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A44BFC5E-F73D-4A26-9E51-7A12F19471B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A44BFC5E-F73D-4A26-9E51-7A12F19471B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D72971C8-C135-47E9-BC01-08600E9FD9BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D72971C8-C135-47E9-BC01-08600E9FD9BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D72971C8-C135-47E9-BC01-08600E9FD9BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D72971C8-C135-47E9-BC01-08600E9FD9BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
