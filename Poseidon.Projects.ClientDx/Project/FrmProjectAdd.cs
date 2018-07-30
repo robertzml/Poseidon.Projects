@@ -16,6 +16,7 @@ namespace Poseidon.Projects.ClientDx
     using Poseidon.Winform.Base;
     using Poseidon.Projects.Core.BL;
     using Poseidon.Projects.Core.DL;
+    using Poseidon.Projects.Core.Utility;
 
     /// <summary>
     /// 新增项目窗体
@@ -30,6 +31,12 @@ namespace Poseidon.Projects.ClientDx
         #endregion //Constructor
 
         #region Function
+        protected override void InitForm()
+        {
+            this.cmbType.Properties.Items.AddEnum(typeof(ProjectType));
+            base.InitForm();
+        }
+
         /// <summary>
         /// 输入检查
         /// </summary>
@@ -46,6 +53,11 @@ namespace Poseidon.Projects.ClientDx
             if (string.IsNullOrEmpty(this.txtNumber.Text.Trim()))
             {
                 errorMessage = "项目号不能为空";
+                return new Tuple<bool, string>(false, errorMessage);
+            }
+            if (this.cmbType.EditValue == null)
+            {
+                errorMessage = "请选择项目类型";
                 return new Tuple<bool, string>(false, errorMessage);
             }
             if (string.IsNullOrEmpty(this.txtPrincipal.Text.Trim()))
@@ -71,6 +83,7 @@ namespace Poseidon.Projects.ClientDx
             entity.Name = this.txtName.Text;
             entity.Number = this.txtNumber.Text;
             entity.ShortName = this.txtShortName.Text;
+            entity.Type = Convert.ToInt32(this.cmbType.EditValue);
             entity.EstablishDate = this.dpEstablishDate.DateTime;
             entity.Principal = this.txtPrincipal.Text;
             entity.DatasetCode = this.txtDatasetCode.Text;

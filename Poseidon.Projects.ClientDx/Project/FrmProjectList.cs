@@ -26,6 +26,21 @@ namespace Poseidon.Projects.ClientDx
         }
         #endregion //Constructor
 
+        #region Function
+        protected override void InitForm()
+        {
+            LoadData();
+
+            base.InitForm();
+        }
+
+        private void LoadData()
+        {
+            var data = BusinessFactory<ProjectBusiness>.Instance.FindAll();
+            this.projectGrid.DataSource = data.ToList();
+        }
+        #endregion //Function
+
         #region Event
         /// <summary>
         /// 新增项目
@@ -35,6 +50,8 @@ namespace Poseidon.Projects.ClientDx
         private void btnAdd_Click(object sender, EventArgs e)
         {
             ChildFormManage.ShowDialogForm(typeof(FrmProjectAdd));
+
+            LoadData();
         }
         #endregion //Event
     }

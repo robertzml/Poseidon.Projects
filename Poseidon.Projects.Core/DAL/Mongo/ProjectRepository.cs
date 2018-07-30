@@ -41,6 +41,7 @@ namespace Poseidon.Projects.Core.DAL.Mongo
             entity.Name = doc["name"].ToString();
             entity.Number = doc["number"].ToString();
             entity.ShortName = doc["shortName"].ToString();
+            entity.Type = doc["type"].ToInt32();
             entity.EstablishDate = doc["establishDate"].ToLocalTime();
             entity.Principal = doc["principal"].ToString();
             entity.State = doc["state"].ToInt32();
@@ -63,6 +64,7 @@ namespace Poseidon.Projects.Core.DAL.Mongo
                 { "name", entity.Name },
                 { "number", entity.Number },
                 { "shortName", entity.ShortName },
+                { "type", entity.Type },
                 { "establishDate", entity.EstablishDate },
                 { "principal", entity.Principal },
                 { "state", entity.State },

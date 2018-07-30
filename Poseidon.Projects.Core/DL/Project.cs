@@ -28,9 +28,15 @@ namespace Poseidon.Projects.Core.DL
         public string ShortName { get; set; }
 
         /// <summary>
-        /// 立项时间
+        /// 类型
         /// </summary>
-        [Display(Name = "立项时间")]
+        [Display(Name = "类型")]
+        public int Type { get; set; }
+
+        /// <summary>
+        /// 立项日期
+        /// </summary>
+        [Display(Name = "立项日期")]
         public DateTime EstablishDate { get; set; }
 
         /// <summary>

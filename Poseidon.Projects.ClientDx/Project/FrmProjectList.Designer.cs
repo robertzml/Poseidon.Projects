@@ -30,19 +30,21 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.projectGrid = new Poseidon.Projects.ClientDx.ProjectGrid();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
+            this.groupControl2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -71,15 +73,6 @@
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "操作";
             // 
-            // groupControl2
-            // 
-            this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl2.Location = new System.Drawing.Point(3, 123);
-            this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(767, 373);
-            this.groupControl2.TabIndex = 1;
-            this.groupControl2.Text = "groupControl2";
-            // 
             // layoutControl1
             // 
             this.layoutControl1.Controls.Add(this.btnAdd);
@@ -90,6 +83,16 @@
             this.layoutControl1.Size = new System.Drawing.Size(763, 91);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(12, 12);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(739, 22);
+            this.btnAdd.StyleController = this.layoutControl1;
+            this.btnAdd.TabIndex = 4;
+            this.btnAdd.Text = "添加项目";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // layoutControlGroup1
             // 
@@ -102,16 +105,6 @@
             this.layoutControlGroup1.Size = new System.Drawing.Size(763, 91);
             this.layoutControlGroup1.TextVisible = false;
             // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(12, 12);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(739, 22);
-            this.btnAdd.StyleController = this.layoutControl1;
-            this.btnAdd.TabIndex = 4;
-            this.btnAdd.Text = "添加项目";
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.btnAdd;
@@ -120,6 +113,36 @@
             this.layoutControlItem1.Size = new System.Drawing.Size(743, 71);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
+            // 
+            // groupControl2
+            // 
+            this.groupControl2.Controls.Add(this.projectGrid);
+            this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupControl2.Location = new System.Drawing.Point(3, 123);
+            this.groupControl2.Name = "groupControl2";
+            this.groupControl2.Size = new System.Drawing.Size(767, 373);
+            this.groupControl2.TabIndex = 1;
+            this.groupControl2.Text = "项目列表";
+            // 
+            // projectGrid
+            // 
+            this.projectGrid.AllowFilter = true;
+            this.projectGrid.AllowGroup = true;
+            this.projectGrid.AllowSort = true;
+            this.projectGrid.DataSource = null;
+            this.projectGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.projectGrid.Editable = false;
+            this.projectGrid.EnableMasterView = false;
+            this.projectGrid.EnableMultiSelect = false;
+            this.projectGrid.Location = new System.Drawing.Point(2, 21);
+            this.projectGrid.Name = "projectGrid";
+            this.projectGrid.ShowAddMenu = false;
+            this.projectGrid.ShowFooter = false;
+            this.projectGrid.ShowLineNumber = true;
+            this.projectGrid.ShowMenu = false;
+            this.projectGrid.ShowNavigator = false;
+            this.projectGrid.Size = new System.Drawing.Size(763, 350);
+            this.projectGrid.TabIndex = 0;
             // 
             // FrmProjectList
             // 
@@ -132,11 +155,12 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
+            this.groupControl2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -150,5 +174,6 @@
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraEditors.SimpleButton btnAdd;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private ProjectGrid projectGrid;
     }
 }
